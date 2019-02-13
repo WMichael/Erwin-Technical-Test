@@ -69,9 +69,9 @@ function listCards(arr) {
 
 // Testing
 setupDeck();
-shuffleDeck();
+// shuffleDeck();
 moveCards(deckOfCards,hand,5,true);
-console.log("Deck of Cards:");
-listCards(deckOfCards);
-console.log("Hand:");
-listCards(hand);
+// console.log("Deck of Cards:");
+// listCards(deckOfCards);
+// console.log("Hand:");
+// listCards(hand);

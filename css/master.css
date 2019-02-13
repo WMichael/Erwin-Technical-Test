@@ -1,0 +1,15 @@
+#deckOfCards {
+  display: inline-block;
+  border: 1px black solid;
+  float:left;
+  margin: 5px;
+  padding: 5px;
+}
+
+#hand {
+  border: 1px black solid;
+  display: inline-block;
+  float:left;
+  margin: 5px;
+  padding: 5px;
+}
