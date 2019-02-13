@@ -4,6 +4,8 @@ var deckOfCards = new Array();
 var hand = new Array();
 
 function setupDeck() {
+  deckOfCards = [];
+  hand = [];
   for (var i = 0; i < suits.length; i++) {
     for (var j = 0; j < values.length; j++) {
       deckOfCards.push(new Card(suits[i],values[j]))
@@ -49,15 +51,18 @@ function sortCards(arr) {
 // Cards are drawn from the start of the start array and added to the end of destination array.
 function moveCards(startArr,destinationArr,amountOfCards,sort) {
   let drawnCards = new Array();
-  for (var i = 0; i < amountOfCards; i++) {
-    drawnCards.push(startArr.shift());
+  if (amountOfCards <= startArr.length) {
+    for (var i = 0; i < amountOfCards; i++) {
+      drawnCards.push(startArr.shift());
+    }
+    if (sort) {
+      sortCards(drawnCards);
+    }
+    for (var i = 0; i < drawnCards.length; i++) {
+      destinationArr.push(drawnCards[i]);
+    }
   }
-  if (sort) {
-    sortCards(drawnCards);
-  }
-  for (var i = 0; i < drawnCards.length; i++) {
-    destinationArr.push(drawnCards[i]);
-  }
+
 }
 
 // Prints list of cards in console.
@@ -70,7 +75,7 @@ function listCards(arr) {
 // Testing
 setupDeck();
 // shuffleDeck();
-moveCards(deckOfCards,hand,5,true);
+// moveCards(deckOfCards,hand,5,true);
 // console.log("Deck of Cards:");
 // listCards(deckOfCards);
 // console.log("Hand:");
