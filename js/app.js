@@ -1,5 +1,5 @@
-var suits = ["Clubs","Spades","Hearts","Diamonds"];
-var values = ["Two","Three","Four","Five","Six","Seven","Eight","Nine","Ten","Jack","Queen","King","Ace"];
+var suits = ["clubs","spades","hearts","diamonds"];
+var values = ["two","three","four","five","six","seven","eight","nine","ten","jack","queen","king","ace"];
 var deckOfCards = new Array();
 var hand = new Array();
 
