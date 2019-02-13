@@ -13,3 +13,9 @@
   margin: 5px;
   padding: 5px;
 }
+
+.card {
+  height: 75px;
+  width: 60px;
+  margin: 3px;
+}

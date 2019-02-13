@@ -41,14 +41,14 @@ function updateUI(){
 
   // List each card from the deck of cards and the hand.
   if (deckOfCards.length > 0) {
-    $.each(deckOfCards, function(key, value){
-      $("#deckOfCards").append((key + 1) + ": " + value.value + " of " + value.suit + "</br>");
+    $.each(deckOfCards, function(key, card){
+      $("#deckOfCards").append("<img class='card' src='images/" + card.value + card.suit +  ".png' alt='" +  card.value + " of " + card.suit + "'>");
     });
   }
 
   if (hand.length > 0) {
-    $.each(hand, function(key, value){
-      $("#hand").append((key + 1) + ": " + value.value + " of " + value.suit + "</br>");
+    $.each(hand, function(key, card){
+      $("#hand").append("<img class='card' src='images/" + card.value + card.suit +  ".png' alt='" +  card.value + " of " + card.suit + "'>");
     });
   }
 
