@@ -18,12 +18,12 @@ $(document).ready(function() {
   });
 
   $("#drawCardsBtn").on("click", function(){
-    moveCards(deckOfCards,hand, $("select#cardsToDraw").val(),false)
+    drawCards($("select#cardsToDraw").val(),false)
     updateUI();
   });
 
   $("#drawSortCardsBtn").on("click", function(){
-    moveCards(deckOfCards,hand, $("select#cardsToDraw").val(),true)
+    drawCards($("select#cardsToDraw").val(),true)
     updateUI();
   });
 

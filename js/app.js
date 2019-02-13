@@ -46,20 +46,22 @@ function sortCards(arr) {
   });
 }
 
-// Move cards from one array to another. Function takes in start and destination array, amount of cards
+// Draw cards function takes in the amount of cards to be drawn
 // and whether the drawn cards should be sorted or not.
-// Cards are drawn from the start of the start array and added to the end of destination array.
-function moveCards(startArr,destinationArr,amountOfCards,sort) {
+// Cards are drawn from the start of the deck of cards and are added to the end of hand.
+function drawCards(amountOfCards,sort) {
   let drawnCards = new Array();
-  if (amountOfCards <= startArr.length) {
+  if (amountOfCards <= deckOfCards.length) {
     for (var i = 0; i < amountOfCards; i++) {
-      drawnCards.push(startArr.shift());
+      drawnCards.push(deckOfCards.shift());
     }
-    if (sort) {
-      sortCards(drawnCards);
-    }
+
     for (var i = 0; i < drawnCards.length; i++) {
-      destinationArr.push(drawnCards[i]);
+      hand.push(drawnCards[i]);
+    }
+
+    if (sort) {
+      sortCards(hand);
     }
   }
 
