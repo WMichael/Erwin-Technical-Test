@@ -73,12 +73,3 @@ function listCards(arr) {
     console.log(i + ": " + arr[i].suit + " " + arr[i].value);
   }
 }
-
-// Testing
-setupDeck();
-// shuffleDeck();
-// moveCards(deckOfCards,hand,5,true);
-// console.log("Deck of Cards:");
-// listCards(deckOfCards);
-// console.log("Hand:");
-// listCards(hand);

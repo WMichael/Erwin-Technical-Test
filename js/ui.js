@@ -37,7 +37,7 @@ $(document).ready(function() {
 function updateUI(){
   // Clear lists of cards
   $("#deckOfCards").html("<h2>Deck of Cards (" + deckOfCards.length +"):</h2>");
-  $("#hand").html("<h2>Hand: (" + hand.length + ")</h2>");
+  $("#hand").html("<h2>Hand (" + hand.length + "):</h2>");
 
   // List each card from the deck of cards and the hand.
   if (deckOfCards.length > 0) {
