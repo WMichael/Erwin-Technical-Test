@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>Deck of Cards - Erwin Technical Test</title>
-    <script src="js/bootstrap.min.js" charset="utf-8"></script>
     <script src="js/jquery-3.3.1.min.js" charset="utf-8"></script>
     <script src="js/card.js" charset="utf-8"></script>
     <script src="js/app.js" charset="utf-8"></script>
@@ -12,26 +11,30 @@
     <link rel="stylesheet" href="css/master.css">
   </head>
   <body>
-    <u><h1>Deck of Cards</h1></u>
-    <div class="actionbar">
-      <button type="button" id="shuffleBtn">Shuffle Deck</button>
-      <button type="button" id="sortDeckBtn">Sort Deck of Cards</button>
-      <button type="button" id="sortHandBtn">Sort Hand</button>
-      <select id="cardsToDraw">
-        <option value="1">1 card</option>
-        <option value="5">5 cards</option>
-        <option value="10">10 cards</option>
-        <option value="20">20 cards</option>
-      </select>
-      <button type="button" id="drawCardsBtn">Draw Cards</button>
-      <button type="button" id="drawSortCardsBtn">Draw and Sort Cards</button>
-      <button type="button" id="resetBtn">Reset</button>
-    </div>
-    <div id="deckOfCards">
+    <div class="container-fluid">
+      <u><h1>Deck of Cards</h1></u>
+      <div class="actionbar">
+        <button type="button" id="shuffleBtn">Shuffle Deck</button>
+        <button type="button" id="sortDeckBtn">Sort Deck of Cards</button>
+        <button type="button" id="sortHandBtn">Sort Hand</button>
+        <select id="cardsToDraw">
+          <option value="1">1 card</option>
+          <option value="5">5 cards</option>
+          <option value="10">10 cards</option>
+          <option value="20">20 cards</option>
+        </select>
+        <button type="button" id="drawCardsBtn">Draw Cards</button>
+        <button type="button" id="drawSortCardsBtn">Draw and Sort Cards</button>
+        <button type="button" id="resetBtn">Reset</button>
+      </div>
+      <div class="row">
+        <div class="col-md" id="deckOfCards">
 
-    </div>
-    <div id="hand">
+        </div>
+        <div class="col-md" id="hand">
 
+        </div>
+      </div>
     </div>
   </body>
 </html>

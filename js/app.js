@@ -1,8 +1,13 @@
+// Arrays for holding the order of the suits and values.
 var suits = ["clubs","spades","hearts","diamonds"];
 var values = ["two","three","four","five","six","seven","eight","nine","ten","jack","queen","king","ace"];
+
+// Deck of cards and hand array.
 var deckOfCards = new Array();
 var hand = new Array();
 
+
+// Main functions used to manipulate the card arrays and card objects.
 function setupDeck() {
   deckOfCards = [];
   hand = [];
@@ -13,7 +18,7 @@ function setupDeck() {
   }
 }
 
-// Array shuffle could be improved.
+// Randomly shuffles the deck of cards.
 function shuffleDeck() {
   deckOfCards.sort(function(a,b){
     return 0.5 - Math.random()
@@ -73,3 +78,6 @@ function listCards(arr) {
     console.log(i + ": " + arr[i].suit + " " + arr[i].value);
   }
 }
+
+// Deck of Cards is set up at the start.
+setupDeck();

@@ -1,17 +1,22 @@
 #deckOfCards {
-  float:left;
   margin: 5px;
   padding: 5px;
 }
 
 #hand {
-  float:left;
   margin: 5px;
   padding: 5px;
 }
 
 .card {
+  display: inline-block;
   height: 75px;
   width: 60px;
   margin: 3px;
+  z-index:0;
+}
+
+.card:hover {
+  transform: scale(1.8);
+  z-index:1;
 }
