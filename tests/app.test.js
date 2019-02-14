@@ -96,13 +96,6 @@ describe('Deck of Cards', function() {
         }
       }
     });
-
-    // it("After drawing and sorting 5 cards from a shuffled deckOfCards, the Hand array should be sorted.", function() {
-    //   shuffleDeck();
-    //   drawCards(5,true);
-    //
-    // });
-
   });
 
   describe('#drawCards()', function() {
