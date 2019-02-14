@@ -55,29 +55,23 @@ function sortCards(arr) {
 // and whether the drawn cards should be sorted or not.
 // Cards are drawn from the start of the deck of cards and are added to the end of hand.
 function drawCards(amountOfCards,sort) {
-  let drawnCards = new Array();
   if (amountOfCards <= deckOfCards.length) {
     for (var i = 0; i < amountOfCards; i++) {
-      drawnCards.push(deckOfCards.shift());
+      hand.push(deckOfCards.shift());
     }
-
-    for (var i = 0; i < drawnCards.length; i++) {
-      hand.push(drawnCards[i]);
-    }
-
     if (sort) {
       sortCards(hand);
     }
   }
-
 }
 
 // Prints list of cards in console.
 function listCards(arr) {
-  for (var i = 0; i < arr.length; i++) {
-    console.log(i + ": " + arr[i].suit + " " + arr[i].value);
+  for (i in arr) {
+    console.log(i + ": " + arr[i].value + " of " + arr[i].suit);
   }
 }
 
 // Deck of Cards is set up at the start.
 setupDeck();
+listCards(deckOfCards);

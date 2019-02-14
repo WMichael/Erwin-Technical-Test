@@ -1,4 +1,6 @@
 $(document).ready(function() {
+
+  // Update user interface on start
   updateUI();
 
   // Event listeners
@@ -34,6 +36,8 @@ $(document).ready(function() {
 
 });
 
+
+// Function clears the two lists of cards and then starts adding cards from the two arrays.
 function updateUI(){
   // Clear lists of cards
   $("#deckOfCards").html("<h2>Deck of Cards (" + deckOfCards.length +"):</h2>");
