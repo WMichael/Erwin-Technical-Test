@@ -14,18 +14,18 @@
     <div class="container-fluid">
       <u><h1>Deck of Cards</h1></u>
       <div class="actionbar">
-        <button type="button" id="shuffleBtn">Shuffle Deck</button>
-        <button type="button" id="sortDeckBtn">Sort Deck of Cards</button>
-        <button type="button" id="sortHandBtn">Sort Hand</button>
-        <select id="cardsToDraw">
+        <button type="button" class="btn btn-primary" id="shuffleBtn">Shuffle Deck</button>
+        <button type="button" class="btn btn-secondary" id="sortDeckBtn">Sort Deck of Cards</button>
+        <button type="button" class="btn btn-secondary" id="sortHandBtn">Sort Hand</button> <br>
+        <select class="custom-select-sm" id="cardsToDraw">
           <option value="1">1 card</option>
           <option value="5">5 cards</option>
           <option value="10">10 cards</option>
           <option value="20">20 cards</option>
         </select>
-        <button type="button" id="drawCardsBtn">Draw Cards</button>
-        <button type="button" id="drawSortCardsBtn">Draw and Sort Cards</button>
-        <button type="button" id="resetBtn">Reset</button>
+        <button type="button" class="btn btn-success" id="drawCardsBtn">Draw Cards</button>
+        <button type="button" class="btn btn-success" id="drawSortCardsBtn">Draw and Sort Cards</button>
+        <button type="button" class="btn btn-danger" id="resetBtn">Reset</button>
       </div>
       <div class="row">
         <div class="col-md" id="deckOfCards">
