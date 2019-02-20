@@ -46,7 +46,7 @@ function updateUI(){
   // List each card from the deck of cards and the hand.
   if (deckOfCards.length > 0) {
     deckOfCards.forEach(card => {
-      document.getElementById("deckOfCards").append("<img class='card' src='images/" + card.value + card.suit +  ".png' alt='" +  card.value + " of " + card.suit + "'>");
+      $("#deckOfCards").append("<img class='card' src='images/" + card.value + card.suit +  ".png' alt='" +  card.value + " of " + card.suit + "'>");
     });
   }
 
