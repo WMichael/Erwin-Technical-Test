@@ -1,35 +1,35 @@
-$(document).ready(function() {
+document.addEventListener("DOMContentLoaded", function(event){
 
   // Update user interface on start
   updateUI();
 
   // Event listeners
-  $("#shuffleBtn").on("click", function(){
+  document.getElementById("shuffleBtn").addEventListener("click", function(){
     shuffleDeck();
     updateUI();
   });
 
-  $("#sortDeckBtn").on("click", function(){
+  document.getElementById("sortDeckBtn").addEventListener("click", function(){
     sortCards(deckOfCards);
     updateUI();
   });
 
-  $("#sortHandBtn").on("click", function(){
+  document.getElementById("sortHandBtn").addEventListener("click", function(){
     sortCards(hand);
     updateUI();
   });
 
-  $("#drawCardsBtn").on("click", function(){
-    drawCards($("select#cardsToDraw").val(),false)
+  document.getElementById("drawCardsBtn").addEventListener("click", function(){
+    drawCards(document.getElementById("cardsToDraw").value,false);
     updateUI();
   });
 
-  $("#drawSortCardsBtn").on("click", function(){
-    drawCards($("select#cardsToDraw").val(),true)
+  document.getElementById("drawSortCardsBtn").addEventListener("click", function(){
+    drawCards(document.getElementById("cardsToDraw").value,true)
     updateUI();
   });
 
-  $("#resetBtn").on("click", function(){
+  document.getElementById("resetBtn").addEventListener("click", function(){
     setupDeck();
     updateUI();
   });
@@ -40,18 +40,18 @@ $(document).ready(function() {
 // Function clears the two lists of cards and then starts adding cards from the two arrays.
 function updateUI(){
   // Clear lists of cards
-  $("#deckOfCards").html("<h2>Deck of Cards (" + deckOfCards.length +"):</h2>");
-  $("#hand").html("<h2>Hand (" + hand.length + "):</h2>");
+  document.getElementById("deckOfCards").innerHTML = "<h2>Deck of Cards (" + deckOfCards.length +"):</h2>";
+  document.getElementById("hand").innerHTML = "<h2>Hand (" + hand.length + "):</h2>";
 
   // List each card from the deck of cards and the hand.
   if (deckOfCards.length > 0) {
-    $.each(deckOfCards, function(key, card){
-      $("#deckOfCards").append("<img class='card' src='images/" + card.value + card.suit +  ".png' alt='" +  card.value + " of " + card.suit + "'>");
+    deckOfCards.forEach(card => {
+      document.getElementById("deckOfCards").append("<img class='card' src='images/" + card.value + card.suit +  ".png' alt='" +  card.value + " of " + card.suit + "'>");
     });
   }
 
   if (hand.length > 0) {
-    $.each(hand, function(key, card){
+    hand.forEach(card => {
       $("#hand").append("<img class='card' src='images/" + card.value + card.suit +  ".png' alt='" +  card.value + " of " + card.suit + "'>");
     });
   }
